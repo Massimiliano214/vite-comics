@@ -4,7 +4,7 @@ export default {
   data() {
     return {
         dcComics: [
-            "CHARACTERS", "COMICS", "MOVIES", "TV", "GAMES", "COLLECTIBLES", "VIDEOS", "FANS", "NEWS", "SHOP"
+            "Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"
         ],
     };
   },
@@ -17,13 +17,7 @@ export default {
             <div class="firstList">
                 <h4>DC COMICS</h4>
                 <ul>
-                    <li><a href="#">Characters</a></li>
-                    <li><a href="#">Comics</a></li>
-                    <li><a href="#">Movies</a></li>
-                    <li><a href="#">TV</a></li>
-                    <li><a href="#">Games</a></li>
-                    <li><a href="#">Videos</a></li>
-                    <li><a href="#">News</a></li>
+                    <li v-for="(item, index) in dcComics" :key="index"><a href="#">{{ item }}</a></li>
                 </ul>
 
                 <h4>SHOP</h4>
