@@ -93,6 +93,6 @@ export default {
 
     a {
         text-decoration: none;
-        color: darkgrey;
+        color: rgb(121, 121, 121);
     }
 </style>
