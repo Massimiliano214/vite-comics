@@ -8,7 +8,7 @@
   <TheHeader />
 
   <div class="container">
-    <h3> --> Content goes here <--</h3>
+    <h3>  -- &gt; Content goes here &lt;--  </h3>
   </div>
 
   <TheFooter />
