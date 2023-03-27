@@ -6,6 +6,11 @@
 
 <template>
   <TheHeader />
+
+  <div class="container">
+    <h3> --> Content goes here <--</h3>
+  </div>
+
   <TheFooter />
   <BottomBanner />
 </template>
