@@ -6,6 +6,12 @@ export default {
         dcComics: [
             "Characters", "Comics", "Movies", "TV", "Games", "Videos", "News"
         ],
+        dcShop: [
+            "Shop DC", "Shop DC Collectibles"
+        ],
+        dcDc: [
+            "Terms Of Use", "Privacy policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscription", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"
+        ],
     };
   },
 };
@@ -22,8 +28,7 @@ export default {
 
                 <h4>SHOP</h4>
                 <ul>
-                    <li><a href="#">Shop DC</a></li>
-                    <li><a href="#">Shop DC Collectibles</a></li>
+                    <li v-for="(item, index) in dcShop" :key="index"><a href="#">{{ item }}</a></li>
                 </ul>
 
             </div>
@@ -31,17 +36,7 @@ export default {
             <div class="firstList">
                 <h4>DC</h4>
                 <ul>
-                    <li><a href="#">Terms Of Use</a></li>
-                    <li><a href="#">Privacy policy (New)</a></li>
-                    <li><a href="#">Ad Choices</a></li>
-                    <li><a href="#">Advertising</a></li>
-                    <li><a href="#">Jobs</a></li>
-                    <li><a href="#">Subscription</a></li>
-                    <li><a href="#">Talent Workshops</a></li>
-                    <li><a href="#">CPSC Certificates</a></li>
-                    <li><a href="#">Ratings</a></li>
-                    <li><a href="#">Shop Help</a></li>
-                    <li><a href="#">Contact Us</a></li>
+                    <li v-for="(item, index) in dcDc" :key="index"><a href="#">{{ item }}</a></li>
                 </ul>
             </div>
            
