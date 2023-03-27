@@ -12,6 +12,9 @@ export default {
         dcDc: [
             "Terms Of Use", "Privacy policy (New)", "Ad Choices", "Advertising", "Jobs", "Subscription", "Talent Workshops", "CPSC Certificates", "Ratings", "Shop Help", "Contact Us"
         ],
+        dcSites: [
+            "DC", "MAD Magazine", "DC Kids", "DC universe", "DC power Visa"
+        ],
     };
   },
 };
@@ -43,11 +46,7 @@ export default {
             <div class="firstList">
                 <h4>SITES</h4>
                 <ul>
-                    <li><a href="#">DC</a></li>
-                    <li><a href="#">MAD Magazine</a></li>
-                    <li><a href="#">DC Kids</a></li>
-                    <li><a href="#">DC universe</a></li>
-                    <li><a href="#">DC power Visa</a></li>
+                    <li v-for="(item, index) in dcSites" :key="index"><a href="#">{{ item }}</a></li>
                 </ul>
             </div>
 
