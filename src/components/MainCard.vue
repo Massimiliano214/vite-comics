@@ -27,11 +27,6 @@ export default {
     }
     .mainCard {
         width: calc(1170px / 6 - 40px);
-        
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
         margin: 20px;
 
         img {

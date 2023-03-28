@@ -131,8 +131,9 @@ export default {
             .cardLayout {
                 
                 flex-wrap: wrap;
-                width: calc(100% / 6);
+                width: calc(100% / 6 - 10px);
                 display: flex;
+                flex-grow: 1;
                 justify-content: center;
                 align-items: center;
                 
