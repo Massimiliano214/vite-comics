@@ -92,26 +92,53 @@ export default {
     <div class="hubBg">
         <img src="../assets/img/jumbotron.jpg" alt="jumbotron">
     </div>
-    <div class="container">
-        <div v-for="(comics, index) in comicsList" :key="index">
-            <MainCard :thumb="comicsList.thumb" :series="comicsList.series"/>
+    
+    <div class="hubBottom">
+        <div class="container">
+            <div class="cardLayout" v-for="(comics, index) in comicsList" :key="index">
+                <MainCard :thumb="comics.thumb" :series="comics.series"/>
+            </div>
         </div>
         
     </div>
+    
 </template>
 
 <style scoped lang="scss">
 
     .hubBg {
-        
-
         img {
             
             width: 100%;
             height: 400px;
             object-fit: cover;
             object-position: top;
+            display: block;
             
         }
+        
+    }
+
+    .hubBottom {
+        background-color: rgb(34, 34, 34);
+        
+
+        .container {
+            flex-wrap: wrap;
+            height: 100%;
+            
+
+            .cardLayout {
+                
+                flex-wrap: wrap;
+                width: calc(100% / 6);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                
+            }
+        }
+
+        
     }
 </style>
