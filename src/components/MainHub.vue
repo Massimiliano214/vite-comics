@@ -151,7 +151,8 @@ export default {
                 width: calc(100% / 6 - 10px);
                 display: flex;
                 flex-grow: 1;
-                
+                justify-content: center;
+                align-items: flex-start;
                 
             }
         }
