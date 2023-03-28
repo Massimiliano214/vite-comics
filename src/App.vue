@@ -1,19 +1,24 @@
-<script setup>
+<script>
   import TheHeader from "./components/TheHeader.vue";
   import TheFooter from "./components/TheFooter.vue";
   import BottomBanner from "./components/BottomBanner.vue";
   import MainBanner from "./components/MainBanner.vue";
+  import MainHub from "./components/MainHub.vue";
+
+  export default {
+    components: {
+      TheHeader,
+      TheFooter,
+      BottomBanner,
+      MainBanner,
+      MainHub
+    }
+  }
 </script>
 
 <template>
   <TheHeader />
-  <main>
-    <div class="container">
-      <h3>  -- &gt; Content goes here &lt;--  </h3>
-    </div>
-  </main>
-  
-
+  <MainHub />
   <MainBanner />
   <TheFooter />
   <BottomBanner />
