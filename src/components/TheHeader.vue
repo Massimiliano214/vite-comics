@@ -37,9 +37,12 @@ export default {
             a {
                 text-decoration: none;
                 color: black;
+                padding-bottom: 36px;
+                
 
                 &:hover {
-                    color: skyblue;
+                    color: rgb(53, 128, 243);
+                    border-bottom: 5px solid rgb(53, 128, 243);
                 }
             }
 

@@ -91,6 +91,9 @@ export default {
 <template>
     <div class="hubBg">
         <img src="../assets/img/jumbotron.jpg" alt="jumbotron">
+        <div class="currentSeries">
+            <h3>CURRENT SERIES</h3>
+        </div>
     </div>
     
     <div class="hubBottom">
@@ -98,6 +101,10 @@ export default {
             <div class="cardLayout" v-for="(comics, index) in comicsList" :key="index">
                 <MainCard :thumb="comics.thumb" :series="comics.series"/>
             </div>
+        </div>
+
+        <div class="loadMore">
+            <a href="#">Load More</a>
         </div>
         
     </div>
@@ -107,6 +114,7 @@ export default {
 <style scoped lang="scss">
 
     .hubBg {
+        position: relative;
         img {
             
             width: 100%;
@@ -117,10 +125,19 @@ export default {
             
         }
         
+        .currentSeries {
+            color: white;
+            position: absolute;
+            left: 450px;
+            bottom: -15px;
+            background-color: rgb(53, 128, 243);
+            padding: 10px 30px;
+        }
     }
 
     .hubBottom {
         background-color: rgb(34, 34, 34);
+        padding-bottom: 30px;
         
 
         .container {
@@ -134,12 +151,23 @@ export default {
                 width: calc(100% / 6 - 10px);
                 display: flex;
                 flex-grow: 1;
-                justify-content: center;
-                align-items: center;
+                
                 
             }
         }
 
         
+    }
+
+    .loadMore {
+        text-align: center;
+       
+        
+        a {
+            background-color: rgb(53, 128, 243);
+            color: white;
+            padding: 15px 50px;
+            font-size: 1.5rem;
+        }
     }
 </style>
