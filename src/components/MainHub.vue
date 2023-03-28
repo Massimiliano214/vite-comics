@@ -1,6 +1,11 @@
 <script>
+import MainCard from './MainCard.vue';
+
 export default {
     name: "MainHub",
+    components: {
+        MainCard
+    },
     data() {
         return {
             comicsList: [
@@ -84,11 +89,29 @@ export default {
 
 
 <template>
+    <div class="hubBg">
+        <img src="../assets/img/jumbotron.jpg" alt="jumbotron">
+    </div>
     <div class="container">
-        <h5>ciao</h5>
+        <div v-for="(comics, index) in comicsList" :key="index">
+            <MainCard :thumb="comicsList.thumb" :series="comicsList.series"/>
+        </div>
+        
     </div>
 </template>
 
 <style scoped lang="scss">
 
+    .hubBg {
+        
+
+        img {
+            
+            width: 100%;
+            height: 400px;
+            object-fit: cover;
+            object-position: top;
+            
+        }
+    }
 </style>
